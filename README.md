@@ -8,6 +8,6 @@ I'm learning a little bit of coding here and there.
 <p>This is only a website, so to view it, simply open the home page and it should work from there.</p>
 
 <b>License</b>
-<p>This project is licensed under the apache license 2.0 License - see the LICENSE.md file for details</p>
+<p>This project is licensed under the apache CC0-1.0 License - see the LICENSE.md file for details</p>
 
  
