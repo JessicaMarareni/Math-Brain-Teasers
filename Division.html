@@ -1,0 +1,224 @@
+<html>
+    <head>
+        <title> Division </title>
+        <link rel=icon href="calc.avif" type="image/icon type">
+        <style>
+            .alles{
+                background-color: rgb(147, 147, 225);
+            }
+            .menu{
+                display:flex;
+                align-items: center;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                background-color: rgb(20, 5, 48);
+                padding-left: 2%;
+                padding-right: 2%;
+                flex-direction: row;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                justify-content: space-between;
+            }
+            .menulist{
+                text-decoration: none;
+                color: rgb(247, 240, 232);
+
+            }
+            .menulist:hover{
+                color:rgb(250, 187, 0);
+            }
+            .body{
+                display:flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                justify-items: center;
+                align-content: center;   
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+            }
+            .heading{
+                color: black;
+                text-align: center;
+                padding-top: 5%;
+                padding-bottom: 5%;
+                font-size: 50px;
+
+            }
+            .button1{
+                color: rgb(29, 5, 39);
+                width:40vh;
+                height:20vh;
+                background-color: rgb(175, 250, 114);
+                border: solid 5px;
+                border-top-left-radius:10px ;
+                border-bottom-right-radius:10px;
+
+            }
+            .button2{
+                color: rgb(29, 5, 39);
+                width:40vh;
+                height:20vh;
+                background-color: rgb(175, 250, 114);
+                border: solid 5px;
+                border-top-left-radius:10px ;
+                border-bottom-right-radius:10px;
+            }
+            .button1:hover{
+                width:40vh;
+                height:20vh;
+                background-color: salmon;
+                border: solid 5px;
+                border-top-left-radius:10px ;
+                border-bottom-right-radius:10px ;
+                color: black;
+
+            }
+            .button2:hover{
+                width:40vh;
+                height:20vh;
+                background-color: salmon;
+                border: solid 5px;
+                border-top-left-radius:10px ;
+                border-bottom-right-radius:10px ;
+                color: black;
+
+            }
+            .main{
+                color: black;
+                padding-bottom: 10%;
+                align-content: center;
+
+            }
+            .control{
+                padding-bottom: 5%;
+
+            }
+            .intro{
+                display:none;
+                flex-direction: column;
+                flex-wrap:wrap;
+                justify-content: center;
+                justify-items: center;
+                text-align: center;
+
+            }
+            .work{
+                padding-bottom: 5%;
+                display:none;
+            }
+            .ans{
+                width:10vh;
+                height:14%;
+                background-color: rgb(173, 114, 250);
+                border: solid 1px;
+                border-radius:10px ;
+                color: black;
+                font-weight: bold;
+            }
+            .ans:hover{
+                width:10vh;
+                height:14%;
+                background-color: rgb(250, 216, 114);
+                border: solid 1px;
+                border-radius:10px ;
+                color: rgb(59, 54, 54);
+                font-weight: bold;
+            }
+            .restart{
+                width:10vh;
+                height:14%;
+                background-color: rgb(173, 114, 250);
+                border: solid 1px;
+                border-radius:10px ;
+                color: black;
+                font-weight: bold;
+                display:none;
+            }
+            .restart:hover{
+                width:10vh;
+                height:14%;
+                background-color: rgb(152, 250, 114);
+                border: solid 1px;
+                border-radius:10px ;
+                color: black;
+                font-weight: bold;
+            }
+            .footer{
+                display:flex;
+                align-items: center;
+                padding-top: 10%;
+                color: bisque;
+                background-color: rgb(20, 5, 48);
+                padding-left: 2%;
+                padding-right: 2%;
+                flex-direction: row;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                justify-content: space-between;
+            }
+
+        </style>
+    </head>
+
+    <body class="alles">
+
+    <div class="menu">
+<a href="Index.html" class="menulist"> Addition </a>
+<a href="Subtraction.html" class="menulist"> Subtraction </a>
+<a href="Multiplication.html" class="menulist"> Multiplication </a>
+<a href="Division.html" class="menulist"> Division </a>
+    </div>
+
+    <div class="body">
+
+        <div class="heading">
+            <h class="welkom"><b>Welcome!</b></h> 
+        </div>
+
+        <div class="main">
+            <div class="control">
+            <button class="button1" onclick="extra()" id="B1"> Let's get started</button>
+            </div>
+        <div class="intro" id="intro">
+            <h2>This is just a little math game to get you stimulated</h2>
+            <br>
+            <p> Basically, you'll just get asked very basic division questions.</p>
+            <p> To get questions based on subtraction, multiplication or addition,</p>
+            <p> simply click on the various options in the menu bar above.</p>
+            <p>For each question that you get correct, your score will increase by 1.</p> 
+            <p>If you get a question wrong, the game restarts. Simple rules.</p>
+            <p>Now let's begin.</p>
+            <p><b>NB! Round off to the nearest integer</b></p>
+            <p id="ee"> Press the button below to start.</p>
+            <p></p>
+            <button type="button" class="button2" onclick="begin()" id="B2"> Begin </button>
+        </div>
+        </div>
+
+        <div class="work" id="work">
+            <p><b>Your sum is:</b></p>
+            <p id="question"> </p>
+            <p>Answer here: </p>
+            <input id="answer">
+            <button type="button" class="ans" onclick="submit()" id="submit"> Submit</button>
+            <button type="button" class="restart" onclick="restart()" id="restart"> Restart </button>
+            <p id="mt"> </p>
+            <p><b> 😉Your score:</b></p>
+            <p id="score"> 0 </p>
+            <p><b>⭐Your High score⭐:</b></p>
+            <p id="highscore"> 0 </p>
+        </div>
+    </div>
+
+        <div class="footer">
+            <p> Testing Math™</p>
+            <p>A Subsidiary of BDIC Ltd.</p>
+            <p>Here To Help You Help Us</p>
+        </div>
+
+        <script src="Division.js"></script>
+    </body>
+</html>
